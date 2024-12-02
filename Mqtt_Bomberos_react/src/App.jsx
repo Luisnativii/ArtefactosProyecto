@@ -10,11 +10,12 @@ function App() {
   };
 
   const topics = [
-    "/sensor/flame",   // Sensores de flama
-    "/sensor/gas",     // Sensores de gas
-    "/sensor/distance" // Sensor de distancia
-  ]; // Lista de topics a los que se suscribirá
-
+    "/sensor/flame",
+    "/sensor/gas",
+    "/sensor/distance",
+    "/robot/log", // Topic para los logs del monitor serial
+  ];
+  
   return (
     <MqttProvider brokerUrl={brokerUrl} options={options} topics={topics}>
       <Dashboard />
